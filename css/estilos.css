@@ -51,6 +51,21 @@ top: 70px;
     margin: 0px;
     
 }
+li{
+    font-size: 30px;
+    transition: font-size 0.5s;
+}
+li:hover{
+    font-size: 40px;
+}
+img{
+    height: 340px;
+    transition: height 0.5s;
+
+}
+img:hover{
+    height: 370px;
+}
 .titulo{
     text-align: center;
     font-family: 'Playfair Display', serif;
@@ -72,11 +87,16 @@ top: 70px;
     display: inline-block;
 position: relative;
 padding-top: 45px;
-
 }
 .imagen{
     border: 1px;
+    height: 70px;
+    transition: height 0.5s;
 }
+.imagen:hover{
+    height: 80px;
+}
+
 .tabla{
 background-color: #ffffff;
 display: inline-block;
@@ -153,6 +173,13 @@ padding-top: 65px;
     background-color: #baf5f3;
 
 }
+.imgtabla{
+    height: 256px;
+    transition: height 0.5s;
+}
+.imgtabla:hover{
+    height: 300px;
+}
  /*Media Queries*/
  @media screen and (max-width: 1024px){
     #nav ul {
@@ -208,7 +235,7 @@ padding-top: 65px;
         text-align: start;
         justify-content: left;
         padding-left: 180px;
-        padding-top: 69px;
+        padding-top: 60px;
 
 
      }
@@ -233,6 +260,14 @@ padding-top: 65px;
     display: flex;
     flex-direction: column;
 }
+.imgtabla{
+    height: 250px;
+    transition: height 0.5s;
+}
+.imgtabla:hover{
+    height: 270px;
+}
+
 }
 
  @media screen and (max-width: 425px){
@@ -299,4 +334,24 @@ padding-top: 65px;
         "derechos derechos";
     padding-top: 0px;
  }
+<<<<<<< HEAD
  }
+=======
+.imgtabla{
+    height: 255px;
+    transition: height 0.5s;
+}
+.imgtabla:hover{
+    height: 255px;
+}
+img{
+    height: 345px;
+    transition: height 0.5s;
+
+}
+img:hover{
+    height: 345px;
+}
+ }
+
+>>>>>>> modificacion
