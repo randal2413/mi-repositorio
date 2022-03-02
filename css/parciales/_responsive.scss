@@ -1,0 +1,261 @@
+ /*Media Queries*/
+@media screen and (max-width: 1024px){
+    .encabezado #nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+        flex-direction: column;
+        list-style-type: none;
+        padding-top: 18px;
+        text-align: center;
+    }
+    .encabezado .titulo {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 53px;
+        padding-left: 272px;
+        padding-top: 25px;
+    }
+    .main {
+        grid-template-columns: 5fr 3fr 0.1fr;
+        grid-template-areas:
+        "principal principal"
+        "ofertas ofertas"
+        "nosotros ubicacion";
+
+     }
+     .mainalterno{
+        background-color: $color-principal;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 5fr 2fr 0.1fr;
+        grid-template-areas:
+            "principal principal"
+            "nosotros ubicacion";
+     }    
+
+
+}
+
+ @media screen and (max-width: 768px) { 
+    
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "principal principal"
+        "ofertas ofertas"
+        "nosotros ubicacion";
+        padding-left: 10px;
+
+     }
+     
+     .encabezado #nav ul {
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+        justify-content: left;
+        padding-left: 180px;
+        padding-top: 45px;
+
+
+     }
+     .encabezado .subrayado {
+         font-size: 20px;
+ }
+.encabezado .titulo{
+    text-align: right;
+    padding-right: 35px;
+    padding-top: 0px;
+}
+.main .tabla{
+    font-size: 15px;
+}
+.main .ubicacion{
+    padding-top: 50px;
+}
+.main .h1Footer{
+    font-size: 18px;
+}
+.encabezado{
+    display: flex;
+    flex-direction: column;
+}
+.main .imgtabla{
+    height: 250px;
+    transition: height 0.5s;
+}
+.main .imgtabla:hover{
+    height: 270px;
+}
+.main img {
+    height: 340px;
+    transition: height 0.5s;
+  }
+  .main img:hover {
+    height: 344px;
+  }
+  
+  .mainalterno .tabla{
+    font-size: 15px;
+}
+.mainalterno .ubicacion{
+    padding-top: 50px;
+}
+.mainalterno .h1Footer{
+    font-size: 18px;
+}
+.encabezado{
+    display: flex;
+    flex-direction: column;
+}
+.mainalterno .imgtabla{
+    height: 250px;
+    transition: height 0.5s;
+}
+.mainalterno .imgtabla:hover{
+    height: 270px;
+}
+.mainalterno img {
+    height: 340px;
+    transition: height 0.5s;
+  }
+  .mainalterno img:hover {
+    height: 344px;
+  }
+
+}
+ @media screen and (max-width: 425px){
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "principal principal"
+        "ofertas ofertas"
+        "nosotros ubicacion"
+        "footer footer";
+        padding-top: 200px;
+        padding-left: 0px;
+ }
+ .main .tabla{
+     font-size: 16px;
+ }
+ .mainalterno{
+    background-color: $color-principal;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 5fr 2fr 0.1fr;
+    grid-template-areas:
+        "principal principal"
+        "nosotros ubicacion";
+        padding-top: 200px;
+    }
+ .main .gridnav{
+    background-color: $color-principal;
+  }
+  .main .ofertas{
+    background-color: $color-principal;
+
+  }
+  .main .gridnosotros{
+    background-color: $color-principal;
+
+  }
+  .main .gridubicacion{
+    background-color: $color-principal;
+
+  }
+  .encabezado .titulo{
+    padding-right: 0px;
+    font-size: 42px;
+    text-align: center;
+    padding-left: 200px;
+    padding-top: 17px;
+}
+.encabezado .subrayado{
+    font-size: 27px;
+}
+
+.encabezado{
+    display: grid;
+    grid-template-columns: 375px 375px;
+    position: absolute;
+}
+
+.encabezado #nav ul {      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-left: 67px;
+    padding-top: 25px;
+    font-size: 31px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 375px 375px;
+    grid-template-areas:
+        "imagen imagen"
+        "derechos derechos";
+    padding-top: 0px;
+ }
+ .footer .gridderechos {
+    grid-area: derechos;
+    background-color: $color-principal;
+  }
+  .footer .gridimagen {
+    grid-area: imagen;
+    background-color: $color-principal;
+  }
+    
+ .main .imgtabla {
+    height: 250px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+.main .imgtabla:hover{
+    height: 250px;
+}
+.main img{
+    height: 345px;
+    transition: height 0.5s;
+
+}
+.main img:hover{
+    height: 345px;
+}
+.main .tabla{
+    font-size: 16px;
+}
+.mainalterno .gridnav{
+   background-color: $color-principal;
+ }
+ .mainalterno .ofertas{
+   background-color: $color-principal;
+ }
+
+ .mainalterno .gridnosotros{
+   background-color: $color-principal;
+ }
+ .mainalterno .gridubicacion{
+   background-color: $color-principal;
+ }
+ .mainalterno .imgtabla {
+    height: 250px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+.mainalterno .imgtabla:hover{
+    height: 250px;
+}
+.mainalterno img{
+    height: 345px;
+    transition: height 0.5s;
+
+}
+.mainalterno img:hover{
+    height: 345px;
+}
+.mainalterno .tabla{
+    font-size: 16px;
+}
+
+
+ }

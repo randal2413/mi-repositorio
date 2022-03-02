@@ -1,0 +1,89 @@
+.main{
+    background-color: $color-principal;
+    margin: 0px;
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: 5fr 3fr 0.1fr;
+    grid-template-areas:
+        "principal principal"
+        "ofertas nosotros"
+        "ofertas ubicacion";
+        .gridnav{
+            grid-area: principal;
+        }
+        .destacados{
+            font-family: Open Sans, sans-serif;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 28px;
+            border: 10px;
+            text-decoration: none;
+        
+        }
+        .orden{
+            padding-left: 20px; 
+            display: inline-block;
+        position: relative;
+        padding-top: 45px;
+        }
+        img{
+            height: 340px;
+            transition: height 0.5s;
+        
+        }
+        img:hover{
+            height: 370px;
+        }
+        .alineado{
+            text-align: center;
+            font-family:'Roboto Condensed', sans-serif;
+            font-size: 25px;
+        }
+        .ofertas{
+            font-family:'Roboto Condensed', sans-serif;
+            font-size: 25px;
+            grid-area: ofertas;
+        
+        }
+        .gridubicacion{
+            grid-area: ubicacion;
+        }
+        .ubicacion{
+            text-align: center;
+            padding: 30px;
+            font-size: 50px;
+            font-family: Open Sans, sans-serif;
+        }
+        .tabla{
+            background-color: #ffffff;
+            display: inline-block;
+            position: relative;
+            font-size: 18px;
+            margin-top: 50px;
+            }
+            .imgtabla{
+                height: 256px;
+                transition: height 0.5s;
+            }
+            .imgtabla:hover{
+                height: 300px;
+            }
+            .gridnosotros{
+                grid-area: nosotros;
+            
+            }
+            .nosotros{
+                text-align: left;
+            padding: 50px;
+                font-size: 50px;
+                font-family: Open Sans, sans-serif;
+            }
+            .h1Footer{
+                font-family:'Titillium Web', sans-serif;
+                font-size: 20px;
+              padding-left: 25px;
+            }
+                                                                                                                                 
+
+}
+

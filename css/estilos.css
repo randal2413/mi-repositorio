@@ -37,11 +37,7 @@ margin: 0px;
 position: sticky;
 display: grid;
 grid-template-columns: 50% 50%;}
-li{
-left: 500px;
-top: 70px;
-   
-}
+
 .subrayado {
     text-decoration: none;
     color: #020303;
@@ -51,13 +47,7 @@ top: 70px;
     margin: 0px;
     
 }
-li{
-    font-size: 30px;
-    transition: font-size 0.5s;
-}
-li:hover{
-    font-size: 40px;
-}
+
 img{
     height: 340px;
     transition: height 0.5s;

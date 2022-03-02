@@ -1,0 +1,44 @@
+.encabezado {
+    background-color: $color-header;
+
+    background-image: url(https://us.123rf.com/450wm/nadiinko/nadiinko1706/nadiinko170600018/79388094-camiseta-en-icono-de-suspensi%C3%B3n-logo-de-l%C3%ADnea-de-tienda-de-ropa-signo-plano-para-la-colecci%C3%B3n-de-pre.jpg?ver=6);
+background-repeat: no-repeat;
+background-size: 180px 200px;
+height: 200px;
+margin: 0px;
+position: sticky;
+display: grid;
+grid-template-columns: 50% 50%;
+.titulo{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    padding-left: 180px;
+    padding-top: 50px;
+}
+#nav ul{    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-direction: row;
+    list-style-type: none;
+padding-top: 65px;
+li{
+    font-size: 30px;
+    transition: font-size 0.5s;
+}
+li:hover{
+    font-size: 40px;
+}
+
+}
+.subrayado {
+    text-decoration: none;
+    color: #020303;
+    font-weight: bold;
+    font-size: 30px;
+  padding: 10px;
+    margin: 0px;
+    
+}
+
+}

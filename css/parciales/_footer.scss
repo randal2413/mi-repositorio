@@ -1,0 +1,27 @@
+.footer{
+    background-color: $color-principal;
+    margin: 0px;
+    padding-top: 100px;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "imagen"
+        "derechos";
+    .gridimagen{
+        grid-area: imagen;
+        background-color: $color-principal;
+    }
+    .imagen{
+        border: 1px;
+        height: 70px;
+        transition: height 0.5s;
+    }
+    .imagen:hover{
+        height: 80px;
+    }
+    .gridderechos{
+        grid-area: derechos;
+        background-color: $color-principal;
+    
+    }          
+}
