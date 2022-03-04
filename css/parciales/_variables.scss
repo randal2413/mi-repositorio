@@ -1,2 +1,20 @@
 $color-principal: #baf5f3;
 $color-header: #2cadc4;
+$mapaTitulo: (
+    centro: center, 
+    tFuente: 60px,
+    izquierda: 180px,
+    arriba: 50px
+);
+@mixin encabezado {
+    background-color: $color-header;
+
+    background-image: url(https://us.123rf.com/450wm/nadiinko/nadiinko1706/nadiinko170600018/79388094-camiseta-en-icono-de-suspensi%C3%B3n-logo-de-l%C3%ADnea-de-tienda-de-ropa-signo-plano-para-la-colecci%C3%B3n-de-pre.jpg?ver=6);
+background-repeat: no-repeat;
+background-size: 180px 200px;
+height: 200px;
+margin: 0px;
+position: sticky;
+display: grid;
+grid-template-columns: 50% 50%;
+}

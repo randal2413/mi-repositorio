@@ -73,13 +73,12 @@
   display: grid;
   -ms-grid-columns: 5fr 3fr 0.1fr;
       grid-template-columns: 5fr 3fr 0.1fr;
-      grid-template-areas: "principal principal" "ofertas nosotros" "ofertas ubicacion";
+      grid-template-areas: "principal principal"
+ "ofertas nosotros"
+ "ofertas ubicacion";
 }
 
 .main .gridnav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: principal;
 }
 
@@ -118,15 +117,10 @@
 .main .ofertas {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
   grid-area: ofertas;
 }
 
 .main .gridubicacion {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: ubicacion;
 }
 
@@ -156,8 +150,6 @@
 }
 
 .main .gridnosotros {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: nosotros;
 }
 
@@ -181,13 +173,11 @@
   display: grid;
   -ms-grid-columns: 5fr 2fr 0.1fr;
       grid-template-columns: 5fr 2fr 0.1fr;
-      grid-template-areas: "principal principal" "nosotros ubicacion";
+      grid-template-areas: "principal principal"
+ "nosotros ubicacion";
 }
 
 .mainalterno .gridnav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: principal;
 }
 
@@ -224,8 +214,6 @@
 }
 
 .mainalterno .gridubicacion {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: ubicacion;
 }
 
@@ -255,8 +243,6 @@
 }
 
 .mainalterno .gridnosotros {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: nosotros;
 }
 
@@ -285,12 +271,11 @@
   text-align: center;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "imagen" "derechos";
+      grid-template-areas: "imagen"
+ "derechos";
 }
 
 .footer .gridimagen {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: imagen;
   background-color: #baf5f3;
 }
@@ -307,8 +292,6 @@
 }
 
 .footer .gridderechos {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: derechos;
   background-color: #baf5f3;
 }
@@ -343,7 +326,9 @@
   .main {
     -ms-grid-columns: 5fr 3fr 0.1fr;
         grid-template-columns: 5fr 3fr 0.1fr;
-        grid-template-areas: "principal principal" "ofertas ofertas" "nosotros ubicacion";
+        grid-template-areas: "principal principal"
+ "ofertas ofertas"
+ "nosotros ubicacion";
   }
   .mainalterno {
     background-color: #baf5f3;
@@ -352,15 +337,17 @@
     display: grid;
     -ms-grid-columns: 5fr 2fr 0.1fr;
         grid-template-columns: 5fr 2fr 0.1fr;
-        grid-template-areas: "principal principal" "nosotros ubicacion";
+        grid-template-areas: "principal principal"
+ "nosotros ubicacion";
   }
 }
 
 @media screen and (max-width: 768px) {
   .main {
-    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "principal principal" "ofertas ofertas" "nosotros ubicacion";
+        grid-template-areas: "principal principal"
+ "ofertas ofertas"
+ "nosotros ubicacion";
     padding-left: 10px;
   }
   .encabezado #nav ul {
@@ -410,7 +397,7 @@
     transition: height 0.5s;
   }
   .main .imgtabla:hover {
-    height: 270px;
+    height: 255px;
   }
   .main img {
     height: 340px;
@@ -444,7 +431,7 @@
     transition: height 0.5s;
   }
   .mainalterno .imgtabla:hover {
-    height: 270px;
+    height: 255px;
   }
   .mainalterno img {
     height: 340px;
@@ -458,9 +445,11 @@
 
 @media screen and (max-width: 425px) {
   .main {
-    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "principal principal" "ofertas ofertas" "nosotros ubicacion" "footer footer";
+        grid-template-areas: "principal principal"
+ "ofertas ofertas"
+ "nosotros ubicacion"
+ "footer footer";
     padding-top: 200px;
     padding-left: 0px;
   }
@@ -474,7 +463,8 @@
     display: grid;
     -ms-grid-columns: 5fr 2fr 0.1fr;
         grid-template-columns: 5fr 2fr 0.1fr;
-        grid-template-areas: "principal principal" "nosotros ubicacion";
+        grid-template-areas: "principal principal"
+ "nosotros ubicacion";
     padding-top: 200px;
   }
   .main .gridnav {
@@ -519,7 +509,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     padding-left: 67px;
-    padding-top: 25px;
+    padding-top: 14px;
     font-size: 31px;
   }
   .footer {
@@ -527,20 +517,15 @@
     display: grid;
     -ms-grid-columns: 375px 375px;
         grid-template-columns: 375px 375px;
-        grid-template-areas: "imagen imagen" "derechos derechos";
+        grid-template-areas: "imagen imagen"
+ "derechos derechos";
     padding-top: 0px;
   }
   .footer .gridderechos {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: derechos;
     background-color: #baf5f3;
   }
   .footer .gridimagen {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: imagen;
     background-color: #baf5f3;
   }

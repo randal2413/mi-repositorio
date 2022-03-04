@@ -1,20 +1,12 @@
-.encabezado {
-    background-color: $color-header;
-
-    background-image: url(https://us.123rf.com/450wm/nadiinko/nadiinko1706/nadiinko170600018/79388094-camiseta-en-icono-de-suspensi%C3%B3n-logo-de-l%C3%ADnea-de-tienda-de-ropa-signo-plano-para-la-colecci%C3%B3n-de-pre.jpg?ver=6);
-background-repeat: no-repeat;
-background-size: 180px 200px;
-height: 200px;
-margin: 0px;
-position: sticky;
-display: grid;
-grid-template-columns: 50% 50%;
+.encabezado { 
+    @include encabezado;
+    
 .titulo{
-    text-align: center;
+    text-align: map-get($mapaTitulo, centro);
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
-    padding-left: 180px;
-    padding-top: 50px;
+    font-size:  map-get($mapaTitulo, tFuente);
+    padding-left:  map-get($mapaTitulo, izquierda);
+    padding-top:  map-get($mapaTitulo, arriba);
 }
 #nav ul{    display: flex;
     justify-content: space-evenly;
