@@ -7,6 +7,7 @@
     font-size:  map-get($mapaTitulo, tFuente);
     padding-left:  map-get($mapaTitulo, izquierda);
     padding-top:  map-get($mapaTitulo, arriba);
+
 }
 #nav ul{    display: flex;
     justify-content: space-evenly;
@@ -15,11 +16,11 @@
     list-style-type: none;
 padding-top: 65px;
 li{
-    font-size: 30px;
+    font-size: 3rem;
     transition: font-size 0.5s;
 }
 li:hover{
-    font-size: 40px;
+    font-size: 3rem;
 }
 
 }
@@ -27,7 +28,7 @@ li:hover{
     text-decoration: none;
     color: #020303;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 3rem;
   padding: 10px;
     margin: 0px;
     

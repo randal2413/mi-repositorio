@@ -12,7 +12,7 @@
     .encabezado .titulo {
         text-align: center;
         font-family: 'Playfair Display', serif;
-        font-size: 53px;
+        font-size: 5.3rem;
         padding-left: 272px;
         padding-top: 25px;
     }
@@ -60,7 +60,7 @@
 
      }
      .encabezado .subrayado {
-         font-size: 20px;
+         font-size: 2rem;
  }
 .encabezado .titulo{
     text-align: right;
@@ -68,13 +68,16 @@
     padding-top: 0px;
 }
 .main .tabla{
-    font-size: 15px;
+    font-size: 1.5rem;
+}
+.main th{
+    font-size: 1.5rem;
 }
 .main .ubicacion{
     padding-top: 50px;
 }
 .main .h1Footer{
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .encabezado{
     display: flex;
@@ -96,13 +99,16 @@
   }
   
   .mainalterno .tabla{
-    font-size: 15px;
+    font-size: 1.5rem;
+}
+.mainalterno th{
+    font-size: 1.5rem;
 }
 .mainalterno .ubicacion{
     padding-top: 50px;
 }
 .mainalterno .h1Footer{
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .encabezado{
     display: flex;
@@ -136,7 +142,7 @@
         padding-left: 0px;
  }
  .main .tabla{
-     font-size: 16px;
+     font-size: 1.6rem;
  }
  .mainalterno{
     background-color: $color-principal;
@@ -165,13 +171,13 @@
   }
   .encabezado .titulo{
     padding-right: 0px;
-    font-size: 42px;
+    font-size: 4.2rem;
     text-align: center;
     padding-left: 200px;
     padding-top: 17px;
 }
 .encabezado .subrayado{
-    font-size: 27px;
+    font-size: 2.7rem;
 }
 
 .encabezado{
@@ -186,7 +192,7 @@
     flex-direction: column;
     padding-left: 67px;
     padding-top: 14px;
-    font-size: 31px;
+    font-size: 3.1rem;
 }
 .footer{
     display: grid;
@@ -222,8 +228,12 @@
     height: 345px;
 }
 .main .tabla{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
+.main td{
+    font-size: 1.85rem;
+}
+
 .mainalterno .gridnav{
    background-color: $color-principal;
  }
@@ -254,8 +264,12 @@
     height: 345px;
 }
 .mainalterno .tabla{
-    font-size: 16px;
+    font-size: 1.6rem;
 }
+.mainalterno td{
+    font-size: 1.85rem;
+}
+
 
 
  }
