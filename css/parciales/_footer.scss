@@ -13,11 +13,14 @@
     }
     h1{
         font-size: 2rem;
+        font-family: 'Lato', sans-serif;
+
     }
     .imagen{
         border: 1px;
         height: 70px;
         transition: height 0.5s;
+        border-radius: 10px;
     }
     .imagen:hover{
         height: 80px;

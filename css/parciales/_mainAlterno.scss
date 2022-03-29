@@ -10,7 +10,7 @@
             grid-area: principal;
         }
         .destacados{
-            font-family: Open Sans, sans-serif;
+            font-family: 'Playfair Display', serif;
             font-size: 5rem;
             text-align: center;
             padding-top: 28px;
@@ -27,6 +27,7 @@
         img{
             height: 340px;
             transition: height 0.5s;
+            border-radius: 25px;
         
         }
         img:hover{
@@ -34,7 +35,7 @@
         }
         .alineado{
             text-align: center;
-            font-family:'Roboto Condensed', sans-serif;
+            font-family: 'Lato', sans-serif;
             font-size: 2.5rem;
         }
         .gridubicacion{
@@ -44,7 +45,7 @@
             text-align: center;
             padding: 30px;
             font-size: 5rem;
-            font-family: Open Sans, sans-serif;
+            font-family: 'Playfair Display', serif;
         }
         .tabla{
             background-color: #ffffff;
@@ -52,6 +53,7 @@
             position: relative;
             font-size: 1.8rem;
             margin-top: 50px;
+            border-radius: 10px;
             }
             th{
                 font-size: 1.8rem;
@@ -59,11 +61,18 @@
             td{
                 font-size: 1.8rem;
             }
-            .imgtabla{
+            .imgtabla2{
                 height: 256px;
                 transition: height 0.5s;
             }
-            .imgtabla:hover{
+            .imgtabla2:hover{
+                height: 300px;
+            }
+            .imgtabla2{
+                height: 256px;
+                transition: height 0.5s;
+            }
+            .imgtabla2:hover{
                 height: 300px;
             }
             .gridnosotros{
@@ -74,7 +83,7 @@
                 text-align: left;
             padding: 50px;
                 font-size: 5rem;
-                font-family: Open Sans, sans-serif;
+                font-family: 'Playfair Display', serif;
             }
             .h1Footer{
                 font-family:'Titillium Web', sans-serif;

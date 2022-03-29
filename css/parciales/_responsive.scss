@@ -48,6 +48,13 @@
         padding-left: 10px;
 
      }
+     .main .ubicacion{
+        font-size: 4.9rem;
+    }
+    .main .nosotros{
+        font-size: 4.9rem;
+    }
+   
      
      .encabezado #nav ul {
         display: flex;
@@ -141,6 +148,15 @@
         padding-top: 200px;
         padding-left: 0px;
  }
+ .main .destacados{
+     font-size: 5.5rem;
+ }
+ .main .ubicacion{
+     font-size: 5rem;
+ }
+ .main .nosotros{
+     font-size: 4.9rem;
+ }
  .main .tabla{
      font-size: 1.6rem;
  }
@@ -161,6 +177,7 @@
     background-color: $color-principal;
 
   }
+  
   .main .gridnosotros{
     background-color: $color-principal;
 
@@ -212,12 +229,12 @@
   }
     
  .main .imgtabla {
-    height: 250px;
+    height: 248px;
     -webkit-transition: height 0.5s;
     transition: height 0.5s;
 }
 .main .imgtabla:hover{
-    height: 250px;
+    height: 248px;
 }
 .main img{
     height: 345px;
@@ -248,13 +265,22 @@
    background-color: $color-principal;
  }
  .mainalterno .imgtabla {
-    height: 250px;
+    height: 233px;
     -webkit-transition: height 0.5s;
     transition: height 0.5s;
 }
 .mainalterno .imgtabla:hover{
-    height: 250px;
+    height: 233px;
 }
+.mainalterno .imgtabla2 {
+    height: 246px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+}
+.mainalterno .imgtabla2:hover{
+    height: 246px;
+}
+
 .mainalterno img{
     height: 345px;
     transition: height 0.5s;

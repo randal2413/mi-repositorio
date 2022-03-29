@@ -12,8 +12,8 @@
             grid-area: principal;
         }
         .destacados{
-            font-family: Open Sans, sans-serif;
-            font-size: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 6.5rem;
             text-align: center;
             padding-top: 28px;
             border: 10px;
@@ -29,6 +29,7 @@
         img{
             height: 340px;
             transition: height 0.5s;
+            border-radius: 25px;
         
         }
         img:hover{
@@ -36,8 +37,14 @@
         }
         .alineado{
             text-align: center;
-            font-family:'Roboto Condensed', sans-serif;
+            font-family: 'Lato', sans-serif;
             font-size: 2.5rem;
+        }
+        .alineado2{
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            text-decoration: line-through;
         }
         .ofertas{
             font-family:'Roboto Condensed', sans-serif;
@@ -45,14 +52,17 @@
             grid-area: ofertas;
         
         }
+        .video{
+           font-size: 20px;
+        }
         .gridubicacion{
             grid-area: ubicacion;
         }
         .ubicacion{
             text-align: center;
             padding: 30px;
-            font-size: 5rem;
-            font-family: Open Sans, sans-serif;
+            font-size: 6.5rem;
+            font-family: 'Playfair Display', serif;
         }
         .tabla{
             background-color: #ffffff;
@@ -60,6 +70,8 @@
             position: relative;
             font-size: 1.8rem;
             margin-top: 50px;
+            border-radius: 10px;
+            font-family: 'Lato', sans-serif;
             }
             th{
                 font-size: 1.8rem;
@@ -81,8 +93,8 @@
             .nosotros{
                 text-align: left;
             padding: 50px;
-                font-size: 5rem;
-                font-family: Open Sans, sans-serif;
+                font-size: 6.5rem;
+                font-family: 'Playfair Display', serif;
             }
             .h1Footer{
                 font-family:'Titillium Web', sans-serif;
