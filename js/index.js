@@ -1,18 +1,63 @@
-let precioBuzo = 4600
+function compras(){
+let prenda = prompt("Ingrese la prenda que desea comprar").toLowerCase()
+ if(prenda == "buzo"){
+  
+    let talle = parseInt (prompt("ingrese el talle"));  //no lo toma, no se porque..//
 
-const suma = (a,b) => { return a + b }
-const resta = (a,b) => a - b
+    let talles =  prompt("ingrese el talle");
+    let unidad = parseInt (prompt("Ingrese las unidades"));
+    let precioBuzo = 4600
 
-const iva = precioBuzo*0.21
-const descuento = precioBuzo*0.35
-
-let precioFinale = resta(suma(precioBuzo, iva), descuento)
+    const suma = (a,b) => { return a + b }
+    const resta = (a,b) => { return a - b}
+    const multiplicacion = (a,b) => a*b 
+     
+    let subTotal = multiplicacion(precioBuzo, unidad)
+    const iva = subTotal*0.21
+    const descuento = subTotal*0.35
     
-console.log(precioFinale)
+   let precioFinal = resta(suma(subTotal, iva), descuento)
 
 
-if(precioFinale > 3500){
-    console.log("ENVIO GRATIS")
-}else{
-    console.log("ENVIO $500")
+   
+   
+    let compraFinal = alert(`Tu prenda es ${prenda} con la cantidad de ${unidad} unidades y talle ${talles} con un precio final de ${precioFinal} `)
+
+    if(precioFinal > 18000){
+        alert("ENVIO GRATIS")
+    }else{
+        alert("ENVIO $500")
+    }
+    
+
+ } else if (prenda == "jean") {
+    let talle = parseInt (prompt("ingrese el talle"));  //no lo toma, no se porque..//
+
+    let talles =  prompt("ingrese el talle");
+    let unidad = parseInt (prompt("Ingrese las unidades"));
+    let precioJean = 5500
+
+    const suma = (a,b) => { return a + b }
+    const resta = (a,b) => { return a - b}
+    const multiplicacion = (a,b) => a*b 
+     
+    let subTotal = multiplicacion(precioJean, unidad)
+    const iva = subTotal*0.21
+    const descuento = subTotal*0.35
+    
+   let precioFinal = resta(suma(subTotal, iva), descuento)
+   
+   
+    let compraFinal = alert(`Tu prenda es ${prenda} con la cantidad de ${unidad} unidades y talle ${talles} con un precio final de ${precioFinal} `)
+
+    if(precioFinal > 20000){
+        alert("ENVIO GRATIS")
+    }else{
+        alert("ENVIO $500")
+    }
+
+
+ }
+
 }
+compras()
