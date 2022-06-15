@@ -1,63 +1,60 @@
-function compras(){
-    let prenda = prompt("Ingrese la prenda que desea comprar(BUZO O JEAN)").toLowerCase()
-     if(prenda == "buzo"){
-
-        let talle = parseInt (prompt("ingrese el talle"));  //no lo toma, no se porque..//
-
-        let talles =  prompt("ingrese el talle");
-        let unidad = parseInt (prompt("Ingrese las unidades"));
-        let precioBuzo = 4600
-
-        const suma = (a,b) => { return a + b }
-        const resta = (a,b) => { return a - b}
-        const multiplicacion = (a,b) => a*b 
-
-        let subTotal = multiplicacion(precioBuzo, unidad)
-        const iva = subTotal*0.21
-        const descuento = subTotal*0.35
-
-       let precioFinal = resta(suma(subTotal, iva), descuento)
-
-
-
-
-        let compraFinal = alert(`Tu prenda es ${prenda} con la cantidad de ${unidad} unidades y talle ${talles} con un precio final de ${precioFinal} `)
-
-        if(precioFinal > 18000){
-            alert("ENVIO GRATIS")
-        }else{
-            alert("ENVIO $500")
-        }
-
-
-     } else if (prenda == "jean") {
-        let talle = parseInt (prompt("ingrese el talle"));  //no lo toma, no se porque..//
-
-        let talles =  prompt("ingrese el talle");
-        let unidad = parseInt (prompt("Ingrese las unidades"));
-        let precioJean = 5500
-
-        const suma = (a,b) => { return a + b }
-        const resta = (a,b) => { return a - b}
-        const multiplicacion = (a,b) => a*b 
-
-        let subTotal = multiplicacion(precioJean, unidad)
-        const iva = subTotal*0.21
-        const descuento = subTotal*0.35
-
-       let precioFinal = resta(suma(subTotal, iva), descuento)
-
-
-        let compraFinal = alert(`Tu prenda es ${prenda} con la cantidad de ${unidad} unidades y talle ${talles} con un precio final de ${precioFinal} `)
-
-        if(precioFinal > 20000){
-            alert("ENVIO GRATIS")
-        }else{
-            alert("ENVIO $500")
-        }
-
-
-     }
-
+class Producto {
+    constructor(nombre, precio){
+        this.nombre = nombre
+        this.precio = precio
     }
-    compras() 
+    mostrarProducto(){
+        return this.nombre
+    }
+}
+
+const producto1 = new Producto("Buzo", 4600)
+const producto2 = new Producto("Jean", 5500)
+
+
+class DetallePedido{
+    constructor(producto, cantidad){
+        this.producto = producto
+        this.cantidad = cantidad
+    }
+    calcularSubTotal(){
+    let subTotal = this.producto.precio * this.cantidad
+    return subTotal
+    }
+    mostrarDetalle(){
+      return this.cantidad + "x" + this.producto.mostrarProducto() 
+    }
+}
+
+const detalle1 = new DetallePedido(producto1, 6)
+const detalle2 = new DetallePedido(producto2, 3)
+
+class Pedido{
+    constructor(detalles){
+        this.detalles = detalles
+    }
+    calcularTotal(){
+        let total = 0
+        for (const d of this.detalles) {
+            total += d.calcularSubTotal() 
+        }
+        return total
+    }
+    mostrarPedido(){
+        let texto = "Su pedido es" + '\n';
+        for (const d of this.detalles) {
+            texto += d.mostrarDetalle() + "= $" + d.calcularSubTotal() + '\n'
+        }
+        texto += 'TOTAL: $' + this.calcularTotal()
+        return texto;
+    }
+    }
+    
+const carrito = []
+
+carrito.push(detalle1)
+carrito.push(detalle2)
+
+const pedido1 = new Pedido(carrito)
+
+console.log(pedido1.mostrarPedido())
