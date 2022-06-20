@@ -142,6 +142,22 @@ function comprarProducto(){
      let cantidad = parseInt(prompt("Ingrese la cantidad que desea"))
      
      alert("Su prenda es " + compra + " de talle " + talle + " y agregamos al carrito " + cantidad + " unidades")
+     
+     
+     let agregarCarrito = prompt("¿Desea continuar agregando productos o avanzamos al pago? \n1 - Continuar agregando \n2 - Avanzar al pago")
+     switch(agregarCarrito){
+         case "1": 
+         listarProductos()
+         comprarProducto()
+         break
+         case "2":
+         alert("Muchas gracias por elegirnos") 
+         break
+         default:
+         alert("Opcion incorrecta")
+         listadoProductos()
+         comprarProducto()
+         break}
 
 
 
