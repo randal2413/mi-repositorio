@@ -77,7 +77,7 @@ console.log(pedido1.mostrarPedido())*/
 
 //PRIMERA ENTREGA FINAL
 
-//const carrito = []
+const carrito = []
 
 class Producto{
     constructor(nombre, talle, stock, precio){
@@ -122,7 +122,7 @@ function menu(){
             break
             default:
             alert("Opcion incorrecta")
-            menu()
+               
             break
             
             
@@ -156,7 +156,6 @@ function comprarProducto(){
          default:
          alert("Opcion incorrecta")
          listadoProductos()
-         comprarProducto()
          break}
 
 
@@ -164,6 +163,26 @@ function comprarProducto(){
      }
      menu()
     
+let titulo = document.createElement("h1")
+
+titulo.innerText = "BIENVENIDOS A TIENDA DE ROPA"
+
+document.body.append(titulo)
+
+for (const p of productos){
+
+    let contenedor = document.createElement("div")
+contenedor.innerHTML = ` <p> Producto: ${p.nombre} </p>
+                        <p> Precio: $ ${p.precio} </p>
+                        <p> Stock disponible: ${p.stock}</p>
+                        <button> AGREGAR AL CARRITO</button>`
+document.body.appendChild(contenedor)
+console.log(contenedor)
+}
+
+
+
+
 /*function total(){
     const suma = (a,b) => { return a + b }
         const resta = (a,b) => { return a - b}
