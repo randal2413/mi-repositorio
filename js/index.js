@@ -1,196 +1,109 @@
-/*class Producto {
-    constructor(nombre, precio){
-        this.nombre = nombre
-        this.precio = precio
-    }
-    mostrarProducto(){
-        this.nombre = prompt("Bienvenido a Tienda de Ropa, escoja una opcion: 1.Buzo  2. Jean")
-        this.precio = prompt("Ingrese el modelo:  Modelo A.  Modelo B.")
-        if (this.precio == "Modelo A") {
-           alert("su prenda es" + this.nombre + "su precio es 4600") 
-        }else{
-            alert("su prenda es" + this.nombre + "su precio es 5500") 
-        }
+const agregarCarrito = document.querySelectorAll(".boton")
 
-    }
+agregarCarrito.forEach((agregar) => {
+    agregar.addEventListener("click", agregarClick)
+})
 
-    }
+const carro = document.querySelector(".producto1")
 
-//const valorDelPrompt1 = prompt("Bienvenido a Tienda de Ropa, escoja una opcion: 1.Buzo  2. Jean")
-//et valorDelPrompt2 = prompt("Ingrese el modelo:  Modelo A.  Modelo B.  Modelo C.")
-//if (valorDelPrompt2 == "Modelo A") {
-  //  this.precio = 5500    
-//}else{
-    //this.precio = 5890
-//}
+function agregarClick(event){
+    const boton=  event.target
 
-const producto1 = new Producto("Buzo", 4600)
-const producto2 = new Producto("Jean", 5500)
+    const producto = boton.closest(".orden")
+    const productoTitulo = producto.querySelector(".alineado").textContent
+    const productoImagen = producto.querySelector("img").src
+    const productoPrecio = producto.querySelector(".p").textContent
 
-class DetallePedido{
-    constructor(producto, cantidad){
-        this.producto = producto
-        this.cantidad = cantidad
-    }
-    calcularSubTotal(){
-    let subTotal = this.producto.precio * this.cantidad
-    return subTotal
-    }
-    mostrarDetalle(){
-      return this.cantidad + "x" + this.producto.mostrarProducto() 
+agregarCarritoClick(productoTitulo, productoImagen, productoPrecio)
+}
+
+function agregarCarritoClick(productoTitulo, productoImagen, productoPrecio){
+
+const tituloElemento = carro.getElementsByClassName("nombreProducto")
+for(let i = 0; i < tituloElemento.length; i++)  {
+    if (tituloElemento[i].innerText === productoTitulo){
+        let elementoCantidad = tituloElemento[i].parentElement.parentElement.parentElement.querySelector(".cantidad1")
+        elementoCantidad.value++
+        precioTotal()
+        return;
     }
 }
 
-const detalle1 = new DetallePedido(producto1, 6)
-const detalle2 = new DetallePedido(producto2, 3)
+const cartaProducto = document.createElement("div")
+const agregarCarta = `  <div class= "producto">    
+<div class="detalleProducto">
+<img src=${productoImagen} class="productoImagen"  alt="">
+</div>
 
-class Pedido{
-    constructor(detalles){
-        this.detalles = detalles
-    }
-    calcularTotal(){
-        let total = 0
-        for (const d of this.detalles) {
-            total += d.calcularSubTotal() 
-        }
-        return total
-    }
-    mostrarPedido(){
-        let texto = "Su pedido es" + '\n';
-        for (const d of this.detalles) {
-            texto += d.mostrarDetalle() + "= $" + d.calcularSubTotal() + '\n'
-        }
-        texto += 'TOTAL: $' + this.calcularTotal()
-        return texto;
-    }
-    }
+<div class="nombre">
+<h6 class="nombreProducto">${productoTitulo}</h6>
+</div>
+<div class="precioProducto">
+<h6 class="precio">
+${productoPrecio}
+</h6>   
+</div>
+<div class="cantidad">
+<input class="cantidad1" type="number" value="1">
+<button class="boton1" type="button">ELIMINAR</button>
+</div>
+</div>
+`
+cartaProducto.innerHTML = agregarCarta
+carro.append(cartaProducto)
+
+cartaProducto.querySelector(".boton1").addEventListener("click", eliminarElementos) 
+cartaProducto.querySelector(".cantidad1").addEventListener("change", cambioCantidad) 
+
+precioTotal()
+}
+
+function precioTotal(){
+    let total = 0
+    const carritoTotal = document.querySelector(".precioTotal")
+    const carritoProductos = document.querySelectorAll(".producto")
     
-const carrito = []
+    carritoProductos.forEach((producto) => {
+        const precioProductoTotal = producto.querySelector(".precio")
+const precioNumero = Number(precioProductoTotal.textContent.replace("$", ""))
 
-carrito.push(detalle1)
-carrito.push(detalle2)
+const carritoCantidad = producto.querySelector(".cantidad1")
+const valorCantidad = Number(carritoCantidad.value)
 
-const pedido1 = new Pedido(carrito)
+total = total + precioNumero * valorCantidad
 
-console.log(pedido1.mostrarPedido())*/
+    })
 
 
-//PRIMERA ENTREGA FINAL
+    carritoTotal.innerHTML = `        <h3 class="total">PRECIO TOTAL</h3> 
+    <p class="total">$${total.toFixed(3)}</p>
+   <button class="boton2" type="button">COMPRAR</button>
 
-const carrito = []
 
-class Producto{
-    constructor(nombre, talle, stock, precio){
-        this.nombre = nombre
-        this.talle = talle
-        this.stock = stock
-        this.precio = precio
+   `
+   const botonComprar = carritoTotal.querySelector(".boton2")
+botonComprar.addEventListener("click", botonComprarClick)
+
 }
-}
-
-let numerador = 0
-let listadoProductos = "Nuestros Productos son: "
-const producto1 = new Producto("Buzo", "S, M, L", 15, 4600)
-const producto2 = new Producto("Jean", "40, 42, 44", 30, 5500)
-
-const productos = [producto1, producto2]
-for (const p of productos) {
-    numerador++
-    listadoProductos += "\n" + numerador + "- " + p.nombre
-}
-let numeradorCompras = 0 
-let compras = "Escoja el producto que desee:"
-for (const p of productos) {
-    numeradorCompras++
-    compras += "\n" + numeradorCompras + "- " + p.nombre + " $" + p.precio
-}
-
-
-
-alert(saludar())    
-
-function menu(){
     
-    let menu = prompt("Menú: \n1 - Ver productos \n2 - ESC - Salir")
-        switch(menu){
-            case "1": 
-            listarProductos()
-            comprarProducto()
-            break
-            case "2":
-            alert("Muchas gracias por visitarnos") 
-            break
-            default:
-            alert("Opcion incorrecta")
-               
-            break
-            
-            
-    }}
 
-function saludar(){
-    alert("Bienvenidos a Tienda de Ropa")
+function eliminarElementos(event){
+    const botonBorrar = event.target
+    botonBorrar.closest(".producto").remove()
+    precioTotal()
 }
 
-function listarProductos(){
-    alert(listadoProductos)
-}
-
-function comprarProducto(){
-     let compra = prompt(compras)        
-     let talle = prompt("Ingrese el talle").toUpperCase() 
-     let cantidad = parseInt(prompt("Ingrese la cantidad que desea"))
-     
-     alert("Su prenda es " + compra + " de talle " + talle + " y agregamos al carrito " + cantidad + " unidades")
-     
-     
-     let agregarCarrito = prompt("¿Desea continuar agregando productos o avanzamos al pago? \n1 - Continuar agregando \n2 - Avanzar al pago")
-     switch(agregarCarrito){
-         case "1": 
-         listarProductos()
-         comprarProducto()
-         break
-         case "2":
-         alert("Muchas gracias por elegirnos") 
-         break
-         default:
-         alert("Opcion incorrecta")
-         listadoProductos()
-         break}
-
-
-
-     }
-     menu()
-    
-let titulo = document.createElement("h1")
-
-titulo.innerText = "BIENVENIDOS A TIENDA DE ROPA"
-
-document.body.append(titulo)
-
-for (const p of productos){
-
-    let contenedor = document.createElement("div")
-contenedor.innerHTML = ` <p> Producto: ${p.nombre} </p>
-                        <p> Precio: $ ${p.precio} </p>
-                        <p> Stock disponible: ${p.stock}</p>
-                        <button> AGREGAR AL CARRITO</button>`
-document.body.appendChild(contenedor)
-console.log(contenedor)
+function cambioCantidad(event){
+    const cambio = event.target
+    if (cambio.value <= 0){
+        cambio.value = 1
+    }
+    precioTotal()
 }
 
 
-
-
-/*function total(){
-    const suma = (a,b) => { return a + b }
-        const resta = (a,b) => { return a - b}
-        const multiplicacion = (a,b) => a*b 
-
-        let subTotal = multiplicacion(p.precio, cantidad)
-        const iva = subTotal*0.21
-        const descuento = multiplicacion()
-}*/
-
- 
+function botonComprarClick(){
+    carro.innerHTML = ""
+precioTotal()
+alert("GRACIAS POR SU COMPRA")
+}
