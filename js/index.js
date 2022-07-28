@@ -105,5 +105,5 @@ function cambioCantidad(event){
 function botonComprarClick(){
     carro.innerHTML = ""
 precioTotal()
-alert("GRACIAS POR SU COMPRA")
+swal("Muchas gracias por su compra", "Te esperamos pronto en Tienda de Ropa", "success");
 }
